@@ -18,6 +18,7 @@ function AddButton(){
     button.style.height = "40px";
     return button;
 }
+
 function AddFunctionBtn(text, clickfunc){
     var btn = document.createElement('input');
     btn.setAttribute('value', text);
@@ -27,26 +28,17 @@ function AddFunctionBtn(text, clickfunc){
 }
 
 function AddNewButtons() {
-    var pre = document.createElement("pre");
-    document.getElementsByClassName("ButtonsAdded")[0].appendChild(pre);
+    //Generates the div thats gonna hold the buttons
     var div = document.createElement('div');
     div.setAttribute('ID', "btn"+ButtonCounter.toString());
     document.getElementsByClassName("ButtonsAdded")[0].appendChild(div);
     
+    //Creates buttons through functions and returns them
     var button = AddButton();
     var editButton = AddFunctionBtn("Rediger", "EditButton("+ div.getAttribute("ID") +")");
     var delButton = AddFunctionBtn("Slet", "DeleteButtons("+ div.getAttribute("ID") +")");
-
-    // var editButton = document.createElement('input');
-    // editButton.setAttribute('value', "Rediger");
-    // editButton.setAttribute('onclick', "EditButton("+div.getAttribute("ID")+")");
-    // editButton.setAttribute('type', 'button');
-
-    // var delButton = document.createElement('input');
-    // delButton.setAttribute('value', "Slet");
-    // delButton.setAttribute('onclick', "DeleteButtons("+div.getAttribute("ID")+")");
-    // delButton.setAttribute('type', 'button');
     
+    //Adds the buttons to the new div
     div.appendChild(button);
     div.appendChild(editButton);
     div.appendChild(delButton);
@@ -57,10 +49,12 @@ function AddNewButtons() {
 
 function EditButton(div) {
     TextBoxElement.style.visibility = "visible";
+    //Selects the button of the same ID
     var btn = div.querySelector("#"+div.id+"");
     AddedButtonClicked(btn);
 }
 
+//Deletes the div and the buttons
 function DeleteButtons(div){
     div.remove();
     TextBoxElement.style.visibility = "hidden";

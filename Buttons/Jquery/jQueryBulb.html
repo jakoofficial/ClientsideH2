@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+     <title>Bulb</title>
+     <script src="../node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    <h2>What Can jQuery Do?</h2>
+
+    <p>jQuery can change HTML attribute values.</p>
+
+    <p>In this case jQuery changes the value of the src (source) attribute of an image.</p>
+
+    <button id="BulbOn">Turn on the light</button>
+
+    <img id="myImage" src="../Pictures/pic_bulboff.jpg" style="width:100px">
+
+    <button id="BulbOff">Turn off the light</button>
+</body>
+
+</html>
+
+<script src="../ScriptFiles/HTMLPageSetup.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        SetupPage()
+
+        $("#BulbOn").click(function() {
+            $("#myImage").attr("src", "../Pictures/pic_bulbon.jpg");
+        });
+
+        $("#BulbOff").click(function() {
+            $("#myImage").attr("src", "../Pictures/pic_bulboff.jpg");
+        }); 
+    });
+</script>

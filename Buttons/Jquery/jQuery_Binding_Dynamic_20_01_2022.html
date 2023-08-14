@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Binding Dynamic 20/01-2022</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    <div id="TopMenuBarContent"></div>
+
+    <h2>h2pd011122 jQuery Binding Dynamic Projekt</h2>
+
+    <div class="Margin">
+        <input id="txtButtonContext" type="text" value="test" />
+        <br />
+        <br />
+        <input id="btnAddNewButton" type="button" value="Tilføj knapper" />
+        <br />
+        <br />
+
+        <div class="ButtonsAdded">
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="../ScriptFiles/HTMLPageSetup.js"></script>
+<script src="/ScriptFiles/jQueryBindingDynamic.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        SetupPage();
+    });
+</script>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>javaScript Binding Dynamic</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../ScriptFiles/JavaScriptBindingDynamic.js"></script>
+</head>
+
+<body>
+    <div class="Margin">
+        <input id="txtButtonContext" type="text" value="test" onkeyup="TextboxValueChanged()" />
+        <br />
+        <br />
+        <input id="btnAddNewButton" type="button" value="Tilføj knap" onclick="AddNewButton()" />
+        <br />
+        <br />
+
+        <div class="ButtonsAdded">
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    window.onload = SetupDOMElements();
+</script>
+
+<script src="../ScriptFiles/HTMLPageSetup.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        SetupPage()
+    });
+</script>
