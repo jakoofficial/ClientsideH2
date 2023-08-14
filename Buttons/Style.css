@@ -1,0 +1,13 @@
+* {
+}
+
+#buttonArea {
+    display: inline-block;
+    width: 500px;
+}
+#editBtnArea{
+    display: inline-block;
+}
+#txtButtonContext {
+    visibility: hidden;
+}
