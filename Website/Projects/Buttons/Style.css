@@ -10,4 +10,5 @@
 }
 #txtButtonContext {
     visibility: hidden;
+    display: inline-block;
 }

@@ -5,12 +5,13 @@
     <title>javaScript Binding Dynamic</title>
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="JavaScriptBindingDynamic.js"></script>
-    <link rel="StyleSheet" href="Style.css">
+    <link rel="StyleSheet" href="../Style.css">
 </head>
 
 <body>
-    <a style="position: fixed; margin-left: 100px;" href="../../../Index.html">Go back</a>
     <div id="buttonArea" class="Margin">
+        <a style="display: inline-block;" href="../../../Index.html">Go back</a>
+        <input id="txtButtonContext" type="text" value="test" onkeyup="TextboxValueChanged()" />
         <input id="btnAddNewButton" type="button" value="Tilføj knap" onclick="AddNewButtons()" />
         <br />
         <br />
@@ -19,7 +20,6 @@
         </div>
     </div>
     <div id="editBtnArea">
-        <input id="txtButtonContext" type="text" value="test" onkeyup="TextboxValueChanged()" />
     </div>
 </body>
 
