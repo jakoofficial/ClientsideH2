@@ -3,6 +3,8 @@ var canEdit = false;
 var TextBoxElement;
 var DocumentButton;
 
+
+
 function SetupDOMElements() {
     TextBoxElement = document.getElementById("txtButtonContext");
 }
@@ -19,6 +21,8 @@ function AddButton(){
     return button;
 }
 
+
+
 function AddFunctionBtn(text, clickfunc){
     var btn = document.createElement('input');
     btn.setAttribute('value', text);
@@ -27,7 +31,7 @@ function AddFunctionBtn(text, clickfunc){
     return btn;
 }
 
-function AddNewButtonsToDiv() {
+function AddNewButtons() {
     //Generates the div thats gonna hold the buttons
     var div = document.createElement('div');
     div.setAttribute('ID', "btn"+ButtonCounter.toString());

@@ -35,7 +35,7 @@ function createButton() {
     var btnString = "<input id='btnDynamic" + ButtonAddedCounter + "' ";
     btnString += "value='btnDynamic" + ButtonAddedCounter + "' ";
     btnString += "type='button'";
-    // btnString += "click='"+ SelectBtn(this) +"'";
+    // btnString += "click='"+ SelectBtn(btnString.attr("id")) +"'";
     btnString += " />";
     return btnString;
 }
