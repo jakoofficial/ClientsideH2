@@ -71,8 +71,29 @@ $(document).ready(function(){
         $(".ButtonsAdded").append(button);
     }
 
+    //Updates the value of the buttons that 
+    //include the "Button_" value
     function UpdateButtonValue(){
-        
+        var allInputs = $(":input");
+        var tempBtnArr = [];
+
+        for(var i = 0; i<allInputs.length; i++){
+            var btn = allInputs[i];
+            if (btn.value.includes("Button_")) {
+                tempBtnArr.push(btn);
+            }
+        }
+
+        if (tempBtnArr.length != 0) {
+            ButtonAddedCounter = 0;
+        }
+
+        for (var i = 0; i<tempBtnArr.length; i++) {
+            var tempbtn = tempBtnArr[i];
+            tempbtn.value = "Button_"+ButtonAddedCounter;
+            ButtonAddedCounter++;
+        }
+
     }
 
     function btnPressed(name){
@@ -94,6 +115,7 @@ $(document).ready(function(){
         $(this).remove();
         });
         ButtonAddedCounter--;
+        UpdateButtonValue();
         console.log(ButtonAddedCounter);
     }
 
