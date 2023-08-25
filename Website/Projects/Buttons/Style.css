@@ -3,12 +3,15 @@
 
 #buttonArea {
     display: inline-block;
-    width: 500px;
+    min-width: 500px;
 }
 #editBtnArea{
     display: inline-block;
 }
 #txtButtonContext {
     visibility: hidden;
+    display: inline-block;
+}
+#txtButtonContextJq {
     display: inline-block;
 }
