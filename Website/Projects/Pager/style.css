@@ -1,3 +1,11 @@
 *{
     background-color: rgb(245, 245, 245);
 }
+
+.CurrentPage{
+    font-weight: bold;
+    color:brown;
+}
+.BtnNotVisible {
+    visibility: hidden;
+}
