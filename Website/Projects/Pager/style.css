@@ -6,6 +6,8 @@
     font-weight: bold;
     color:brown;
 }
+
 .BtnNotVisible {
-    visibility: hidden;
+    display:none;
+    
 }
