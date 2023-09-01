@@ -40,12 +40,10 @@ function SetPageAsCurrent(b) {
     //Goes through all buttons on pages
     for(let i = 0; i < divPageBtns.children.length; i++) {
         var curBtn = divPageBtns.children[i]; //Sets curbtn to button on page
-        //If curBtn is not part of CurrentPage make invisible
-        //Else make visible
-        if (curBtn.id != currentPage) {
-            curBtn.classList.add('BtnNotVisible');
-        }
-        else {
+        //Make curBtn invisible
+        curBtn.classList.add('BtnNotVisible');
+        //If curBtn is part of CurrentPage make visible
+        if (curBtn.id == currentPage) {
             curBtn.classList.remove('BtnNotVisible');
         }
     }
